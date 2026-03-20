@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soliday Consulting</title>
+  <meta name="description" content="Soliday Consulting helps companies build stronger sales cultures, improve revenue execution, and accelerate growth." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#101a2d;
+      --panel-2:#13203a;
+      --text:#eef4ff;
+      --muted:#a9b7d0;
+      --line:rgba(255,255,255,.08);
+      --accent:#7cc4ff;
+      --accent-2:#d8ecff;
+      --max:1180px;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,196,255,.16), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(124,196,255,.10), transparent 22%),
+        linear-gradient(180deg, #0a1120 0%, #0d1628 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(16px);
+      background:rgba(10,17,32,.7);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:74px;
+    }
+    .brand{
+      font-weight:700; letter-spacing:.2px; font-size:1.05rem;
+      display:flex; align-items:center; gap:12px;
+    }
+    .brand-mark{
+      width:12px; height:12px; border-radius:999px;
+      background:linear-gradient(135deg, var(--accent), #ffffff);
+      box-shadow:0 0 24px rgba(124,196,255,.65);
+    }
+    .nav-links{display:flex; gap:24px; color:var(--muted); font-size:.96rem}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{
+      padding:11px 16px; border:1px solid var(--line); border-radius:999px;
+      background:rgba(255,255,255,.03); color:var(--text); font-weight:600;
+    }
+    .nav-cta:hover{background:rgba(255,255,255,.07)}
+
+    .hero{
+      padding:84px 0 52px;
+    }
+    .hero-grid{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:32px; align-items:stretch;
+    }
+    .eyebrow{
+      color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.74rem; font-weight:700;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(2.45rem, 6vw, 4.9rem);
+      line-height:1.02;
+      letter-spacing:-.04em;
+    }
+    .hero p.lead{
+      margin:0 0 28px;
+      color:var(--muted);
+      font-size:1.1rem;
+      max-width:720px;
+    }
+    .hero-actions{
+      display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:14px 18px; border-radius:999px; font-weight:700; transition:.2s ease;
+      border:1px solid transparent;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, var(--accent), #d7edff);
+      color:#05111f;
+      box-shadow:0 12px 28px rgba(124,196,255,.22);
+    }
+    .btn.primary:hover{transform:translateY(-1px)}
+    .btn.secondary{
+      border-color:var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+    }
+    .btn.secondary:hover{background:rgba(255,255,255,.07)}
+    .hero-note{
+      color:var(--muted); font-size:.94rem;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .intro-card{
+      padding:28px;
+      display:flex; flex-direction:column; justify-content:space-between;
+      min-height:100%;
+    }
+    .stat-grid{
+      display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px;
+    }
+    .stat{
+      padding:16px; border-radius:18px;
+      background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06);
+    }
+    .stat .k{
+      font-size:1.35rem; font-weight:800; margin-bottom:6px;
+    }
+    .stat .d{
+      color:var(--muted); font-size:.92rem;
+    }
+
+    section{
+      padding:28px 0;
+    }
+    .section-head{
+      display:flex; justify-content:space-between; gap:20px; align-items:end;
+      margin-bottom:22px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:clamp(1.7rem, 3vw, 2.5rem);
+      letter-spacing:-.03em;
+    }
+    .section-head p{
+      margin:0; color:var(--muted); max-width:720px;
+    }
+
+    .services{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    }
+    .service{
+      padding:24px;
+    }
+    .service h3{margin:0 0 10px; font-size:1.08rem}
+    .service p{margin:0; color:var(--muted)}
+    .service ul{
+      margin:16px 0 0; padding-left:18px; color:var(--muted);
+    }
+    .service li{margin:7px 0}
+
+    .process{
+      display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+    }
+    .step{
+      padding:22px;
+    }
+    .step .num{
+      width:36px; height:36px; border-radius:999px;
+      display:grid; place-items:center;
+      background:rgba(124,196,255,.12);
+      color:var(--accent-2); font-weight:800; margin-bottom:14px;
+      border:1px solid rgba(124,196,255,.22);
+    }
+    .step h3{margin:0 0 8px; font-size:1.03rem}
+    .step p{margin:0; color:var(--muted)}
+
+    .about{
+      display:grid; grid-template-columns:1fr 1fr; gap:18px;
+    }
+    .about-card{
+      padding:28px;
+    }
+    .about-card p{color:var(--muted)}
+    .quote{
+      font-size:1.35rem; line-height:1.3; letter-spacing:-.03em; margin:0 0 18px;
+    }
+
+    .contact{
+      padding:30px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center;
+      margin:18px 0 24px;
+    }
+    .contact p{color:var(--muted); margin:0 0 18px}
+    .contact-list{
+      display:grid; gap:12px;
+    }
+    .contact-item{
+      padding:14px 16px; border-radius:16px;
+      border:1px solid var(--line); background:rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+    footer{
+      padding:8px 0 40px; color:var(--muted); font-size:.92rem;
+    }
+
+    .small{
+      font-size:.9rem; color:var(--muted);
+    }
+
+    @media (max-width: 980px){
+      .hero-grid, .about, .contact{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width: 700px){
+      .nav-links{display:none}
+      .services, .process, .stat-grid{grid-template-columns:1fr}
+      .hero{padding-top:56px}
+      .wrap{width:min(var(--max), calc(100% - 24px))}
+      .contact{padding:24px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Soliday Consulting home">
+        <span class="brand-mark"></span>
+        <span>Soliday Consulting</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Start a Conversation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Fractional CRO • Sales Enablement • Revenue Execution</div>
+          <h1>Build the sales engine your growth goals deserve.</h1>
+          <p class="lead">
+            Soliday Consulting helps companies strengthen revenue leadership, sharpen sales execution,
+            and build more effective client-facing teams. From strategy to coaching to operating rhythm,
+            the focus is simple: turn momentum into measurable growth.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Schedule an Intro</a>
+            <a class="btn secondary" href="#services">Explore Services</a>
+          </div>
+          <div class="hero-note">
+            Practical support for companies that need sharper positioning, stronger pipeline discipline,
+            better seller coaching, and a more intentional go-to-market motion.
+          </div>
+        </div>
+
+        <aside class="card intro-card">
+          <div>
+            <div class="eyebrow" style="margin-bottom:12px;">What Soliday Consulting Delivers</div>
+            <h2 style="margin:0 0 10px; font-size:1.6rem; letter-spacing:-.03em;">Clear priorities. Better execution. Stronger relationships.</h2>
+            <p class="small">
+              Ideal for leaders who want experienced revenue guidance without the overhead of a full-time executive hire.
+            </p>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <div class="k">Fractional CRO</div>
+              <div class="d">Executive-level revenue leadership on a flexible basis</div>
+            </div>
+            <div class="stat">
+              <div class="k">Seller Coaching</div>
+              <div class="d">Practical development for real client conversations</div>
+            </div>
+            <div class="stat">
+              <div class="k">KPI Discipline</div>
+              <div class="d">Cleaner reporting and more useful dashboards</div>
+            </div>
+            <div class="stat">
+              <div class="k">Sales Process</div>
+              <div class="d">Stronger structure from first meeting to close</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Services</div>
+            <h2>Focused support where revenue teams most often get stuck.</h2>
+          </div>
+          <p>
+            Every engagement is tailored, but the goal remains the same: help your team
+            build confidence, consistency, and commercial traction.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="card service">
+            <h3>Fractional CRO Leadership</h3>
+            <p>
+              Senior revenue leadership for organizations that need structure, accountability,
+              and sharper commercial decision-making.
+            </p>
+            <ul>
+              <li>Revenue planning and prioritization</li>
+              <li>Go-to-market strategy alignment</li>
+              <li>Leadership coaching and operating cadence</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>Sales Process & Pipeline Discipline</h3>
+            <p>
+              Clearer sales motion, stronger stage definitions, and better visibility into what is really moving.
+            </p>
+            <ul>
+              <li>Pipeline and funnel review</li>
+              <li>Stage mapping and buyer commitments</li>
+              <li>Proposal and follow-up improvement</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>Training & Seller Development</h3>
+            <p>
+              Practical coaching that helps client-facing teams ask better questions, run better meetings,
+              and advance real opportunities.
+            </p>
+            <ul>
+              <li>Sales training workshops</li>
+              <li>Role-play and objection handling</li>
+              <li>Manager and seller coaching</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>KPI Planning & Reporting Enhancement</h3>
+            <p>
+              Reporting should drive decisions, not just decorate a meeting. Soliday helps teams track what matters.
+            </p>
+            <ul>
+              <li>Core metric selection</li>
+              <li>Dashboard refinement</li>
+              <li>Weekly and monthly rhythm design</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>Compensation & Incentive Design</h3>
+            <p>
+              Compensation plans should reinforce the right behaviors. Align incentives with the outcomes you want.
+            </p>
+            <ul>
+              <li>Plan structure review</li>
+              <li>Incentive alignment</li>
+              <li>Role clarity and measurement</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>Proposal Development & Commercial Messaging</h3>
+            <p>
+              Improve how your team communicates value, differentiates credibly, and follows through after important conversations.
+            </p>
+            <ul>
+              <li>Proposal strategy support</li>
+              <li>Value articulation</li>
+              <li>Messaging cleanup and refinement</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Approach</div>
+            <h2>Designed to be practical, collaborative, and immediately useful.</h2>
+          </div>
+          <p>
+            Soliday Consulting is built around execution. That means less jargon, more clarity,
+            and recommendations teams can actually put to work.
+          </p>
+        </div>
+
+        <div class="process">
+          <article class="card step">
+            <div class="num">1</div>
+            <h3>Assess</h3>
+            <p>Review current sales motion, leadership rhythm, reporting, and commercial pressure points.</p>
+          </article>
+          <article class="card step">
+            <div class="num">2</div>
+            <h3>Prioritize</h3>
+            <p>Focus on the few changes most likely to improve visibility, consistency, and growth.</p>
+          </article>
+          <article class="card step">
+            <div class="num">3</div>
+            <h3>Build</h3>
+            <p>Create the tools, messaging, scorecards, training, and process improvements the team needs.</p>
+          </article>
+          <article class="card step">
+            <div class="num">4</div>
+            <h3>Coach</h3>
+            <p>Support leaders and sellers as they apply the work in real meetings, real deals, and real moments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <article class="card about-card">
+          <div class="eyebrow">Why Soliday</div>
+          <h2 style="margin:0 0 14px; font-size:2rem; letter-spacing:-.03em;">Built for leaders who want progress, not theater.</h2>
+          <p>
+            Soliday Consulting specializes in helping organizations improve revenue execution through clearer planning,
+            stronger sales habits, better client conversations, and more intentional relationship development.
+          </p>
+          <p>
+            The work is grounded in growth, learning, and building. The style is thoughtful, direct, and collaborative—
+            designed to challenge assumptions, strengthen execution, and help teams move forward with confidence.
+          </p>
+        </article>
+
+        <article class="card about-card">
+          <div class="eyebrow">Point of View</div>
+          <p class="quote">“I specialize in building exceptional sales teams.”</p>
+          <p>
+            Strong growth does not happen by accident. It comes from repeatable behaviors, trusted relationships,
+            visible priorities, and leaders who are willing to coach with intention.
+          </p>
+          <p>
+            Soliday Consulting helps companies put that foundation in place.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="card contact">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2 style="margin:0 0 12px; font-size:2rem; letter-spacing:-.03em;">Let’s talk about where your team is trying to grow.</h2>
+            <p>
+              Whether you need fractional revenue leadership, sales process improvement, or targeted seller development,
+              Soliday Consulting can help you identify the next right move.
+            </p>
+            <div class="hero-actions" style="margin-bottom:0;">
+              <!-- Replace the email address below with your preferred contact email -->
+              <a class="btn primary" href="mailto:hello@solidayconsulting.com?subject=Inquiry%20from%20SolidayConsulting.com">Email Soliday Consulting</a>
+              <!-- Replace the LinkedIn URL below with your actual profile/company page -->
+              <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Engagements may include:</strong><br/>Fractional CRO support, KPI refinement, sales process mapping, training, proposal development, and coaching.</div>
+            <div class="contact-item"><strong>Format:</strong><br/>Project-based, advisory, workshop, or ongoing leadership support.</div>
+            <div class="contact-item"><strong>Location:</strong><br/>Based in Washington. Supporting clients remotely and in person.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Soliday Consulting. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
