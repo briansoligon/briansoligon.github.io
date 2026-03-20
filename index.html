@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #f7f9fc;
       color: #0a2540;
     }
@@ -17,17 +17,6 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #555;
     }
 
     .hero {
@@ -51,20 +40,35 @@
     .hero-img img {
       width: 100%;
       max-width: 360px;
-      border-radius: 12px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #556070;
+      line-height: 1.6;
     }
 
     .buttons {
-      margin-top: 25px;
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 18px;
-      border-radius: 6px;
+      padding: 13px 18px;
+      border-radius: 8px;
       text-decoration: none;
-      margin-right: 10px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .primary {
@@ -73,14 +77,15 @@
     }
 
     .secondary {
-      border: 1px solid #ccc;
+      border: 1px solid #cfd7e3;
       color: #0a2540;
+      background: white;
     }
 
     .subtle {
-      margin-top: 15px;
+      margin-top: 16px;
       font-size: 14px;
-      color: #777;
+      color: #7a8594;
     }
 
     .section {
@@ -89,28 +94,27 @@
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      margin: 0 0 10px;
     }
 
     footer {
       text-align: center;
       margin-top: 80px;
-      color: #999;
+      color: #99a2af;
       font-size: 14px;
     }
-
   </style>
 </head>
 
@@ -122,16 +126,22 @@
     <div class="hero">
 
       <div class="hero-text">
+
         <h1>
-          Revenue growth doesn’t come from more activity.<br>
-          It comes from better execution.
+          Build the sales engine your growth goals deserve.
         </h1>
 
         <p>
-          I help companies strengthen revenue leadership, improve sales execution, and build more effective client relationships.
+          Most teams don’t have a pipeline problem — they have a revenue execution problem.
+          I help companies fix that.
         </p>
 
-        <p style="color:#666; margin-top:10px;">
+        <p>
+          Through fractional CRO leadership, sales enablement, and hands-on coaching,
+          I help teams turn activity into actual revenue.
+        </p>
+
+        <p style="color:#666;">
           Trusted by leaders across energy, utilities, and consulting organizations.
         </p>
 
@@ -148,6 +158,7 @@
         <p class="subtle">
           Fractional CRO • Sales Enablement • Revenue Execution
         </p>
+
       </div>
 
       <div class="hero-img">
@@ -165,17 +176,26 @@
 
         <div class="card">
           <h3>Fractional CRO</h3>
-          <p>Executive-level revenue leadership without full-time overhead.</p>
+          <p>
+            Executive-level revenue leadership without full-time overhead.
+            Align strategy, pipeline, and execution.
+          </p>
         </div>
 
         <div class="card">
           <h3>Sales Enablement</h3>
-          <p>Equip your team with the tools, structure, and training to win.</p>
+          <p>
+            Equip your team with the structure, messaging, and tools needed
+            to consistently win better work.
+          </p>
         </div>
 
         <div class="card">
           <h3>Revenue Execution</h3>
-          <p>Turn strategy into consistent, measurable growth.</p>
+          <p>
+            Turn strategy into measurable outcomes — more meetings,
+            stronger relationships, and higher win rates.
+          </p>
         </div>
 
       </div>
