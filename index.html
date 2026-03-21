@@ -16,6 +16,8 @@
       --line:rgba(255,255,255,.08);
       --accent:#7cc4ff;
       --accent-2:#d8ecff;
+      --icon:#8fc7ff;
+      --icon-soft:#6faeea;
       --max:1180px;
       --radius:22px;
       --shadow:0 18px 50px rgba(0,0,0,.28);
@@ -102,6 +104,7 @@
 
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
       padding:14px 18px; border-radius:999px; font-weight:700; transition:.2s ease;
       border:1px solid transparent;
     }
@@ -183,7 +186,13 @@
     }
 
     .service{padding:24px}
-    .service h3{margin:0 0 10px; font-size:1.08rem}
+    .service h3{
+      margin:0 0 12px;
+      font-size:1.08rem;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
     .service p{margin:0; color:var(--muted)}
     .service ul{
       margin:16px 0 0; padding-left:18px; color:var(--muted);
@@ -204,7 +213,13 @@
       border:1px solid rgba(124,196,255,.22);
     }
 
-    .step h3{margin:0 0 10px; font-size:1.08rem}
+    .step h3{
+      margin:0 0 10px;
+      font-size:1.08rem;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
     .step p{
       margin:0;
@@ -249,6 +264,27 @@
     .small{
       font-size:.9rem; color:var(--muted);
       margin:0;
+    }
+
+    .icon{
+      width:22px;
+      height:22px;
+      flex:0 0 22px;
+      stroke:var(--icon);
+      stroke-width:1.8;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .icon-soft{
+      stroke:var(--icon-soft);
+    }
+
+    .btn .icon{
+      width:18px;
+      height:18px;
+      flex:0 0 18px;
     }
 
     @media (max-width: 980px){
@@ -351,7 +387,13 @@
 
         <div class="services">
           <article class="card service">
-            <h3>Fractional CRO Leadership</h3>
+            <h3>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="8"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Fractional CRO Leadership
+            </h3>
             <p>
               Senior revenue leadership for organizations that need structure, accountability,
               and sharper commercial decision-making.
@@ -364,7 +406,15 @@
           </article>
 
           <article class="card service">
-            <h3>Sales Process &amp; Pipeline Discipline</h3>
+            <h3>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 12h12"></path>
+                <path d="M12 6l6 6-6 6"></path>
+                <path d="M6 6h4"></path>
+                <path d="M6 18h4"></path>
+              </svg>
+              Sales Process &amp; Pipeline Discipline
+            </h3>
             <p>
               Clearer sales motion, stronger stage definitions, and better visibility into what is really moving.
             </p>
@@ -376,7 +426,14 @@
           </article>
 
           <article class="card service">
-            <h3>Training &amp; Seller Development</h3>
+            <h3>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v16"></path>
+                <path d="M6 8h12"></path>
+                <path d="M6 16h12"></path>
+              </svg>
+              Training &amp; Seller Development
+            </h3>
             <p>
               Practical coaching that helps client-facing teams ask better questions, run better meetings,
               and advance real opportunities.
@@ -389,7 +446,15 @@
           </article>
 
           <article class="card service">
-            <h3>Improved Reporting &amp; KPI Visibility</h3>
+            <h3>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 20V11"></path>
+                <path d="M10 20V5"></path>
+                <path d="M16 20v-7"></path>
+                <path d="M22 20v-11"></path>
+              </svg>
+              Improved Reporting &amp; KPI Visibility
+            </h3>
             <p>
               Reporting should drive decisions, not just decorate a meeting. Soliday helps teams build
               clearer dashboards, cleaner metrics, and a more useful operating rhythm.
@@ -422,7 +487,13 @@
         <div class="process">
           <article class="card step">
             <div class="num">1</div>
-            <h3>Assess</h3>
+            <h3>
+              <svg class="icon icon-soft" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5"></circle>
+                <path d="M16 16l4 4"></path>
+              </svg>
+              Assess
+            </h3>
             <p>
               Review current sales motion, leadership rhythm, reporting, and commercial pressure points.
               Identify where momentum is slowing, where accountability is unclear, and where the team
@@ -432,7 +503,14 @@
 
           <article class="card step">
             <div class="num">2</div>
-            <h3>Prioritize</h3>
+            <h3>
+              <svg class="icon icon-soft" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16"></path>
+                <path d="M7 12h10"></path>
+                <path d="M10 17h4"></path>
+              </svg>
+              Prioritize
+            </h3>
             <p>
               Focus on the few changes most likely to move the business. That may mean pipeline discipline,
               clearer seller expectations, better meeting execution, stronger follow-up, or more useful
@@ -442,7 +520,15 @@
 
           <article class="card step">
             <div class="num">3</div>
-            <h3>Build</h3>
+            <h3>
+              <svg class="icon icon-soft" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="6" height="6" rx="1.5"></rect>
+                <rect x="14" y="4" width="6" height="6" rx="1.5"></rect>
+                <rect x="4" y="14" width="6" height="6" rx="1.5"></rect>
+                <rect x="14" y="14" width="6" height="6" rx="1.5"></rect>
+              </svg>
+              Build
+            </h3>
             <p>
               Create the tools, messaging, scorecards, training, and process improvements the team needs.
               The work is designed to be practical, adopted quickly, and aligned to how your people
@@ -452,7 +538,12 @@
 
           <article class="card step">
             <div class="num">4</div>
-            <h3>Coach</h3>
+            <h3>
+              <svg class="icon icon-soft" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 15a3 3 0 0 1-3 3H9l-5 4V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z"></path>
+              </svg>
+              Coach
+            </h3>
             <p>
               Support leaders and sellers as they apply the work in real meetings, real deals, and real
               moments. The objective is not just to recommend a better approach, but to help the team
@@ -514,8 +605,23 @@
               or better reporting visibility, Soliday Consulting can help you identify the next right move.
             </p>
             <div class="hero-actions" style="margin-bottom:0;">
-              <a class="btn primary" href="mailto:hello@solidayconsulting.com?subject=Inquiry%20from%20SolidayConsulting.com">Email Soliday Consulting</a>
-              <a class="btn secondary" href="https://www.linkedin.com/in/briansoligon/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn primary" href="mailto:hello@solidayconsulting.com?subject=Inquiry%20from%20SolidayConsulting.com">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" style="stroke:#05111f;">
+                  <path d="M4 6h16v12H4z"></path>
+                  <path d="M4 8l8 6 8-6"></path>
+                </svg>
+                Email Soliday Consulting
+              </a>
+              <a class="btn secondary" href="https://www.linkedin.com/in/briansoligon/" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 10v8"></path>
+                  <path d="M8 7.5v.01"></path>
+                  <path d="M12 18v-4.5a2.5 2.5 0 0 1 5 0V18"></path>
+                  <path d="M12 10v8"></path>
+                  <rect x="3" y="3" width="18" height="18" rx="2.5"></rect>
+                </svg>
+                LinkedIn
+              </a>
             </div>
           </div>
           <div class="contact-list">
